@@ -52,7 +52,12 @@ dependencies {
 
 ## API usage
 
-Instead of creating a new InstanceContainer
+Loading a world
 ```java
+InstanceContainer instanceContainer = MineStomDataSaving.loadWorld("worlds/lobby");
+```
 
+Saving a world
+```java
+MineStomDataSaving.SAVEWorld("worlds/lobby");
 ```
