@@ -16,10 +16,11 @@ public class MineStomDataSaving {
      * @param savePath - path to save the world to
      */
     public static void saveWorld(String savePath){
+        MinecraftServer.getStorageManager().defineDefaultStorageSystem(FileStorageSystem::new);
+
         InstanceContainer instanceContainer
                 = MinecraftServer.getInstanceManager().createInstanceContainer(MinecraftServer.getStorageManager().getLocation(savePath));
 
-        MinecraftServer.getStorageManager().defineDefaultStorageSystem(FileStorageSystem::new);
         instanceContainer.saveChunksToStorage();
     }
 
