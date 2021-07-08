@@ -59,5 +59,5 @@ InstanceContainer instanceContainer = MineStomDataSaving.loadWorld("worlds/lobby
 
 Saving a world
 ```java
-MineStomDataSaving.SAVEWorld("worlds/lobby");
+MineStomDataSaving.saveWorld("worlds/lobby", instanceContainer);
 ```
