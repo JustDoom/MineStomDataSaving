@@ -2,7 +2,6 @@ package com.justdoom.minestomdatasaving;
 
 import net.minestom.server.MinecraftServer;
 import net.minestom.server.instance.InstanceContainer;
-import net.minestom.server.storage.systems.FileStorageSystem;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -16,7 +15,7 @@ public class MineStomDataSaving {
      * @param savePath - path to save the world to
      */
     public static void saveWorld(String savePath, InstanceContainer instanceContainer){
-        MinecraftServer.getStorageManager().defineDefaultStorageSystem(FileStorageSystem::new);
+        //MinecraftServer.getStorageManager().defineDefaultStorageSystem(FileStorageSystem::new);
 
         instanceContainer.saveChunksToStorage();
     }
@@ -28,7 +27,7 @@ public class MineStomDataSaving {
      */
     public static InstanceContainer loadWorld(String loadPath){
 
-        return MinecraftServer.getInstanceManager().createInstanceContainer(MinecraftServer.getStorageManager().getLocation(loadPath));
+        return MinecraftServer.getInstanceManager().createInstanceContainer();
     }
 
     /**
