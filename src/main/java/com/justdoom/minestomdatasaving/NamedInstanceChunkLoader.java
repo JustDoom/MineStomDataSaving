@@ -1,4 +1,4 @@
-package com.justdoom.minestomdatasaving;
+/**package com.justdoom.minestomdatasaving;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -93,3 +93,4 @@ public final class NamedInstanceChunkLoader implements IChunkLoader {
         this.regionFolder = regionFolder;
     }
 }
+**/
