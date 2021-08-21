@@ -1,6 +1,8 @@
 package com.justdoom.minestomdatasaving;
 
 import net.minestom.server.MinecraftServer;
+import net.minestom.server.instance.AnvilLoader;
+import net.minestom.server.instance.IChunkLoader;
 import net.minestom.server.instance.InstanceContainer;
 
 import java.io.IOException;
@@ -27,7 +29,9 @@ public class MineStomDataSaving {
      */
     public static InstanceContainer loadWorld(String loadPath){
         //MinecraftServer.getStorageManager().getLocation(loadPath)
-        return MinecraftServer.getInstanceManager().createInstanceContainer();
+        InstanceContainer instanceContainer = MinecraftServer.getInstanceManager().createInstanceContainer();
+        instanceContainer.setChunkLoader(new AnvilLoader(loadPath));
+        return instanceContainer;
     }
 
     /**
