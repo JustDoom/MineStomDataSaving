@@ -26,7 +26,7 @@ public class MineStomDataSaving {
      * @return - returns the loaded world
      */
     public static InstanceContainer loadWorld(String loadPath){
-
+        //MinecraftServer.getStorageManager().getLocation(loadPath)
         return MinecraftServer.getInstanceManager().createInstanceContainer();
     }
 
