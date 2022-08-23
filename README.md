@@ -1,5 +1,7 @@
 # MineStomDataSaving
 
+This is discontinued/probably doesnt work
+
 This is a library that allows you to easily save and load worlds
 
 Todo
